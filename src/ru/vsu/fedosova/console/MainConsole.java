@@ -3,7 +3,7 @@ package ru.vsu.fedosova.console;
 import ru.vsu.fedosova.ArrayUtils;
 import ru.vsu.fedosova.common.GetQuantityIntervals;
 
-public class Main
+public class MainConsole
 {
     public static void main(String[] args)
     {
