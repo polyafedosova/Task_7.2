@@ -1,18 +1,8 @@
-package ru.vsu.fedosova;
+package ru.vsu.fedosova.common;
 
-public class Program
-{
-    public static void main(String[] args)
-    {
-        int[] arr = ArrayUtils.readIntArrayFromConsole();
+public class GetQuantityIntervals {
 
-        int[] arrIntervals = getQuantityIntervals(arr);
-
-        printResults("decreasing", arrIntervals[0]);
-        printResults("increasing", arrIntervals[1]);
-    }
-
-    public static int[] getQuantityIntervals(int[] arr)
+    public int[] getQuantityIntervals(int[] arr)
     {
         int quantityDecrease = 0;
         int quantityIncrease = 0;
@@ -41,10 +31,5 @@ public class Program
 
         int[] arrayIntervals = new int[] {quantityDecrease, quantityIncrease};
         return arrayIntervals;
-    }
-
-    public static void printResults(String name, int result)
-    {
-        System.out.printf("Quantity of %s intervals in the array: %d\n", name, result);
     }
 }

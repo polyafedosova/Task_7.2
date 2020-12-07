@@ -1,7 +1,7 @@
 package ru.vsu.fedosova.gui.listener;
 
 import ru.vsu.fedosova.ArrayUtils;
-import ru.vsu.fedosova.Program;
+import ru.vsu.fedosova.common.GetQuantityIntervals;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -30,7 +30,9 @@ public class ApplyButtonListener implements ActionListener
         {
             int[] arr = ArrayUtils.toIntArray(inputArr);
 
-            int[] arrIntervals = Program.getQuantityIntervals(arr);
+            GetQuantityIntervals GetQuantityIntervals = new GetQuantityIntervals();
+
+            int[] arrIntervals = GetQuantityIntervals.getQuantityIntervals(arr);
 
             this.outputDecrease.setText(Integer.toString(arrIntervals[0]));
             this.outputIncrease.setText(Integer.toString(arrIntervals[1]));
